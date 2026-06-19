@@ -1,0 +1,56 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Container from "@components/Container.astro";
+---
+<BaseLayout
+  title="Motor Theorie Oefenen — Gratis CBR Voorbereiding | Autotheorie.net"
+  description="Oefen gratis voor het motor theorie-examen (rijbewijs A). Gevaarherkenning, verkeerskennis en verkeersinzicht voor motorrijders."
+>
+  <section class="bg-[linear-gradient(180deg,var(--color-brand-50)_0%,#fff_60%)]">
+    <Container class="py-(--spacing-section)">
+      <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        Motor theorie oefenen
+      </h1>
+      <p class="mt-4 max-w-2xl text-lg text-slate-600">
+        Bereid je gratis voor op het CBR motor theorie-examen (rijbewijs A).
+        Het motor theorie-examen heeft dezelfde opbouw als het auto theorie-examen,
+        maar met situaties specifiek voor motorrijders.
+      </p>
+    </Container>
+  </section>
+
+  <Container class="py-(--spacing-section)">
+    <div class="grid gap-6 md:grid-cols-3 mb-12">
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center">
+        <div class="text-3xl font-extrabold text-brand-700">25</div>
+        <div class="text-sm text-slate-600 mt-1">Gevaarherkenning vragen</div>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center">
+        <div class="text-3xl font-extrabold text-brand-700">12</div>
+        <div class="text-sm text-slate-600 mt-1">Verkeerskennis vragen</div>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center">
+        <div class="text-3xl font-extrabold text-brand-700">28</div>
+        <div class="text-sm text-slate-600 mt-1">Verkeersinzicht vragen</div>
+      </div>
+    </div>
+
+    <div class="rounded-2xl bg-brand-50 border border-brand-100 p-8">
+      <h2 class="text-2xl font-bold text-slate-900">Verschil auto- en motortheorie</h2>
+      <div class="mt-4 article-prose">
+        <p>Het motor theorie-examen is grotendeels hetzelfde als het auto theorie-examen.
+        De verkeersregels en verkeersborden zijn identiek — het verschil zit in de rijdynamiek en situaties die specifiek zijn voor motorrijders.</p>
+        <h3>Specifiek voor motorrijders</h3>
+        <ul>
+          <li>Rijpositie op de weg (links in de rijstrook voor zichtbaarheid)</li>
+          <li>Valrisico's bij bochten en gladde wegdekken</li>
+          <li>Remafstand en rijgedrag bij natte omstandigheden</li>
+          <li>Beschermende kleding als wettelijke verplichting</li>
+          <li>Zichtbaarheid voor andere weggebruikers</li>
+        </ul>
+        <h3>Kosten motortheorie-examen</h3>
+        <p>Het motor theorie-examen kost €33 bij het CBR. Je moet minimaal 55 van de 65 vragen goed hebben.</p>
+      </div>
+    </div>
+  </Container>
+</BaseLayout>

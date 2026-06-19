@@ -1,0 +1,57 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Container from "@components/Container.astro";
+
+const topics = [
+  { title: "Gevaarherkenning", desc: "25 vragen, 8 seconden per vraag. Herken gevaarlijke situaties in het verkeer.", href: "/gevaarherkenning/" },
+  { title: "Verkeerskennis", desc: "12 vragen, 7 minuten. Verkeersregels, borden en situaties.", href: "/verkeerskennis/" },
+  { title: "Verkeersinzicht", desc: "28 vragen, 15 minuten. Inzicht in complexe verkeerssituaties.", href: "/verkeersinzicht/" },
+];
+---
+<BaseLayout
+  title="Auto Theorie Oefenen — Gratis CBR Voorbereiding | Autotheorie.net"
+  description="Oefen gratis voor het auto theorie-examen. Gevaarherkenning, verkeerskennis en verkeersinzicht — alle 3 onderdelen van het CBR examen."
+>
+  <section class="bg-[linear-gradient(180deg,var(--color-brand-50)_0%,#fff_60%)]">
+    <Container class="py-(--spacing-section)">
+      <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        Auto theorie oefenen
+      </h1>
+      <p class="mt-4 max-w-2xl text-lg text-slate-600">
+        Bereid je gratis voor op het CBR theorie-examen. Het examen bestaat uit 3 onderdelen
+        met in totaal 65 vragen. Je mag maximaal 10 fouten maken.
+      </p>
+    </Container>
+  </section>
+
+  <Container class="py-(--spacing-section)">
+    <h2 class="text-2xl font-extrabold text-slate-900 mb-6">De 3 onderdelen van het theorie-examen</h2>
+    <div class="grid gap-5 md:grid-cols-3">
+      {topics.map((t) => (
+        <a href={t.href} class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 hover:-translate-y-0.5 hover:shadow-lg hover:border-brand-300 transition">
+          <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-700">{t.title}</h3>
+          <p class="mt-2 flex-1 text-sm text-slate-600">{t.desc}</p>
+          <span class="mt-4 text-sm font-semibold text-brand-700">Ga oefenen →</span>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-2xl bg-brand-50 border border-brand-100 p-8">
+      <h2 class="text-2xl font-bold text-slate-900">Wat moet je weten voor het CBR theorie-examen?</h2>
+      <div class="mt-4 article-prose">
+        <p>Het CBR theorie-examen voor rijbewijs B bestaat uit 65 vragen verdeeld over 3 onderdelen.
+        Je moet minstens 55 van de 65 vragen goed hebben om te slagen.</p>
+        <h3>Kosten en praktische info</h3>
+        <p>Het theorie-examen kost €33. Je kunt het examen afleggen bij een CBR-examenlocatie bij jou in de buurt.
+        Gemiddeld slaagt slechts 50% van de kandidaten in één keer — goede voorbereiding is essentieel.</p>
+        <h3>Tips om te slagen</h3>
+        <ul>
+          <li>Oefen alle 3 onderdelen apart</li>
+          <li>Maak dagelijks oefenvragen, ook als je denkt dat je klaar bent</li>
+          <li>Let extra op gevaarherkenning — hier maken de meeste mensen fouten</li>
+          <li>Leer verkeersborden uit je hoofd</li>
+        </ul>
+      </div>
+    </div>
+  </Container>
+</BaseLayout>

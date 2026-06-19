@@ -1,0 +1,42 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Container from "@components/Container.astro";
+import { SITE } from "@lib/site";
+---
+<BaseLayout
+  title={`Over ons | ${SITE.name}`}
+  description={`Meer weten over ${SITE.name}? Lees hier wie we zijn en waarom we gratis oefenmateriaal aanbieden voor het CBR theorie-examen.`}
+>
+  <section class="bg-[linear-gradient(180deg,var(--color-brand-50)_0%,#fff_60%)]">
+    <Container class="max-w-3xl py-(--spacing-section)">
+      <h1 class="text-4xl font-extrabold tracking-tight text-slate-900">Over ons</h1>
+      <p class="mt-3 text-lg text-slate-600">
+        {SITE.name} — gratis voorbereiding voor je CBR theorie-examen.
+      </p>
+    </Container>
+  </section>
+
+  <Container class="max-w-3xl pb-(--spacing-section)">
+    <div class="article-prose">
+      <p>Autotheorie.net is opgericht met één doel: zoveel mogelijk mensen helpen slagen voor
+      hun CBR theorie-examen. We bieden gratis oefenmateriaal voor alle onderdelen van het examen.</p>
+
+      <h2>Onze missie</h2>
+      <p>Slechts 50% van de kandidaten slaagt in één keer voor het theorie-examen. Dat betekent dat de helft
+      van de mensen €33 extra kwijt is voor een herkansing. Wij geloven dat goede, gratis voorbereiding
+      dit percentage aanzienlijk kan verbeteren.</p>
+
+      <h2>Wat bieden we aan?</h2>
+      <ul>
+        <li>Gratis oefenvragen voor gevaarherkenning, verkeerskennis en verkeersinzicht</li>
+        <li>Uitleg bij alle vragen zodat je begrijpt waarom iets goed of fout is</li>
+        <li>Actuele content gebaseerd op het officiële CBR-examenprogramma 2026</li>
+        <li>Blog met tips en nieuws over het theorie-examen</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>Heb je een vraag, opmerking of wil je samenwerken?
+      Neem dan contact op via onze <a href="/contact/">contactpagina</a>.</p>
+    </div>
+  </Container>
+</BaseLayout>
