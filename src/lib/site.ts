@@ -1,14 +1,22 @@
 export const SITE = {
-  name: "Autotheorie",
+  name: "Autotheorie.net",
   domain: "autotheorie.net",
   url: "https://autotheorie.net",
-  tagline: "Gratis je theorie-examen oefenen",
+  tagline: "De beste voorbereiding voor je CBR examen",
   description:
-    "Oefen gratis voor je CBR theorie-examen: verkeersborden, voorrangsregels en meer. Wij helpen je slagen.",
+    "Gratis autotheorie leren en oefenen voor het CBR examen. Gevaarherkenning, verkeerskennis en verkeersinzicht — alles op één plek. Al 161.835 toetsen gemaakt.",
   locale: "nl_NL",
   nav: [
+    { label: "Auto theorie", href: "/auto-theorie/" },
+    { label: "Motor theorie", href: "/motor-theorie/" },
+    { label: "Verkeersborden", href: "/verkeersborden/" },
     { label: "Blog", href: "/blog/" },
     { label: "Contact", href: "/contact/" },
   ],
-  popular: [],
+  popular: [
+    { label: "Auto theorie oefenen", href: "/auto-theorie/" },
+    { label: "Gevaarherkenning oefenen", href: "/gevaarherkenning/" },
+    { label: "Motor theorie oefenen", href: "/motor-theorie/" },
+    { label: "Verkeersborden leren", href: "/verkeersborden/" },
+  ],
 };

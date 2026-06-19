@@ -3,7 +3,12 @@ import type { Post } from "@lib/posts";
 import { displayTitle, displayDescription, formatDate } from "@lib/posts";
 interface Props { post: Post; eager?: boolean }
 const { post, eager = false } = Astro.props;
-const { featuredImage, featuredImageAlt, date } = post.data;
+const { featuredImage: fmImage, featuredImageAlt, date } = post.data;
+// Fallback: extract first <img src> from body when frontmatter has no image
+const bodyImage = !fmImage
+  ? post.body?.match(/<img[^>]+src=["']?([^"'\s>]+)["']?/i)?.[1]
+  : undefined;
+const featuredImage = fmImage ?? bodyImage;
 const title = displayTitle(post);
 const desc = displayDescription(post);
 const href = `/${post.id}/`;
@@ -22,7 +27,7 @@ const href = `/${post.id}/`;
     ) : (
       <div class="relative flex aspect-video w-full items-center justify-center bg-gradient-to-br from-brand-600 to-brand-400">
         <span class="font-display text-2xl font-extrabold tracking-tight text-white/90">
-          Autotheorie<span class="text-white">oefenen</span>
+          Auto<span class="text-white">theorie.net</span>
         </span>
         <span class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.18),transparent_60%)]"></span>
       </div>
